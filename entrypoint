@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# initial adjustment
+/usr/sbin/ntpdate -b pool.ntp.org
+# run service
+exec /usr/sbin/ntpd -L -n -c /etc/ntp.conf

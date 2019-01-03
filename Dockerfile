@@ -14,3 +14,8 @@ RUN apk --no-cache add wget libcap-dev build-base && \
             make && make install && \
             install -v -o root -g root -d /var/lib/ntp  &&\
             apk del wget build-base && rm -rf /var/cache/apk/*   && cd / && rm -rf ntp-4.2.8p12*
+
+COPY [ "ntp.conf", "/etc/ntp.conf" ]
+COPY [ "entrypoint", "/entrypoint" ]
+
+ENTRYPOINT [ "/entrypoint" ]
