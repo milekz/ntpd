@@ -1,3 +1,5 @@
+FROM alpine:latest
+
 RUN apk --no-cache add wget libcap-dev build-base && \ 
         wget https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p12.tar.gz && \
         tar -xzf ntp-4.2.8p12.tar.gz && \
