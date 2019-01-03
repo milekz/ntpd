@@ -1,1 +1,1 @@
-# ntpd
+# Docker alpine-ntpd 
